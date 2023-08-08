@@ -1,0 +1,12 @@
+version: '2'
+services:
+  # The Application
+  app:
+    build: .
+    restart: always
+    image: rowing-market-api
+    container_name: cn_rowing-market-api
+    volumes:
+      - .env:/go/src/rowing-club-market.env
+    ports:
+      - "8398:8398"
